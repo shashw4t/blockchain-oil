@@ -28,3 +28,6 @@ This was devloped with Node.js primarily. I used Postman to send http requests t
 * WebSocket - to set up the peer-to-peer server and to connect and communicate with new users 
 * elliptic - to produce public-private keypairs to sign transactions using elliptic curve cryptography
 * uuid - to make unique transactions identifiers
+
+###### Jest Testing 
+Nearly every aspect of the blockchain was check through Jest unit tests which can be identified with the `filename.test.js` extension. Each unit test is labeled with the `it` statement and is grouped with `describe` statements. These tests are executed with the `npm run test` command. If a test fails, Jest helpfully shows the description of the failed test. These tests make sure as new features are added that everything previously built is still functional.
