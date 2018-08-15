@@ -35,3 +35,16 @@ Nearly every aspect of the blockchain was check through Jest unit tests which ca
 ## Functionality 
 This blockchain functions through transactions being completed and then mined. As transactions are made and sent to the ledger, they are added to a transaction pool and can no longer be changed or removed at this point. When a user mines the block, every available transaction is added as a block onto the blockchain. Once the block with potentially multiple transactions is mined, the transaction pool is cleared for all users. Then, this new block is chained to the last block by storing the last block's hash value. Once the blockchain is updated, all other users automatically receive the longer blockchain. In the case where multiple users mine blocks simulatenously, the system will make the longest chain the master blockchain and the other user will have their blocks joined onto the longer chain. This keeps the system decentralized as each user has a copy of the blockchain. *The classes in this repository will have comments to clarify their functionality as well.*
 
+###### Web Application Commands
+Get Requests 
+* `/blocks` - view the user's copy of the blockchain
+* `/transactions` - view the user's copy of the unmined transaction pool
+* `/mine-transactions` - add the cryptocurrency transactions onto the blockchain
+* `/public-key` - view the user's public-key value
+* `/balance` - view the user's wallet balance
+
+Post Request
+* `/mine` - this is a testing feature to add a non-cryptocurrency block to the blockchain
+* `/transact` - adds a new cryptocurrency transaction to the transaction pool
+
+
