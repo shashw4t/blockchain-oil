@@ -55,7 +55,7 @@ class Block {
       return new this(timestamp, lastHash, hash, data, nonce, difficulty);
   }
 
-  //This produces the hash value 
+  //This produces the hash value using SHA-256
   static hash(timestamp, lastHash, data, nonce, difficulty) {
       return ChainUtil.hash(`${timestamp}${lastHash}${data}${nonce}${difficulty}`).toString();
   }
