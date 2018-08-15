@@ -1,6 +1,6 @@
 const DIFFICULTY = 3;
 //This difficulty is the amount of leading zeroes needed in the hash
-//The nonce value is the number of attempts completed by the proof of work until the difficulty requiremnet is satisfied
+//The nonce value is the number of attempts completed by the proof of work until the difficulty requirement is satisfied
 const MINE_RATE = 3000;
 //This mine rate will try and maintain a rate of 1 block mined every 3000 milliseconds 
 //by dynamically changing the difficulty in response to amount of blocks mined
