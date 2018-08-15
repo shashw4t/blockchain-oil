@@ -47,4 +47,8 @@ Post Request
 * `/mine` - this is a testing feature to add a non-cryptocurrency block to the blockchain
 * `/transact` - adds a new cryptocurrency transaction to the transaction pool
 
-
+## Peer-to-Peer Server
+This facillitates communication between each user on the network. The communication lets users receive an update blockchain from their peers and to broadcast their updated blockchain back to their peers. Along with managing blockchain synchronization and validating the blockchains being broadcasted, the server also handles all incoming messages sent from users. There are three message types the server handles. 
+* Replace the current blockchain with a new blockchain
+* Update or add a new transaction to the transaction pool
+* Clear the transaction pool 
