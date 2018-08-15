@@ -8,6 +8,7 @@ class Blockchain{
         this.chain = [Block.genesis()];
     }
     
+    //Simple method to adjoin a block onto the chain
     addBlock(data){
         const block = Block.mineBlock(this.chain[this.chain.length-1], data);
         this.chain.push(block);
@@ -15,6 +16,8 @@ class Blockchain{
         return block;
     }
 
+    //This is the first line of verification along with verifiying the public key of the sender
+    //This checks that the first block is the genesis block and that every block has the right lastHash value
     isValidChain(chain) {
         if (JSON.stringify(chain[0]) !== JSON.stringify(Block.genesis())) return false;
         
@@ -31,6 +34,7 @@ class Blockchain{
         }
     }
 
+    //This synchronizes the chains with the longest chain and sends the appropriate message to each user
     replaceChain(newChain) {
         if(newChain.length <= this.chain.length){
             console.log('Received chain is not longer than the current chain');
