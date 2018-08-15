@@ -45,6 +45,7 @@ class Block {
       let { difficulty } = lastBlock;
       let nonce = 0;
 
+   //Proof of Work is established here
       do {
         nonce++;
         timestamp = Date.now();
