@@ -9,7 +9,7 @@
     "start": "node ./app",
     "dev": "nodemon ./app"
   },
-  "jest ": {
+  "jest": {
     "testEnvironment": "node"
   },
   "keywords": [],
