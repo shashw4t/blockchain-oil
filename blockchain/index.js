@@ -3,7 +3,7 @@ const Block = require('./block');
 //This class serves to store the list of blocks on the blockchain, to add new blocks to the chain, 
 //to validate incoming blockchains, and to synchronize all blockchains with the longest valid chain
 class Blockchain{
-    //this genesis block comes from the block class and starts off the blockchain
+    //This genesis block comes from the block class and starts off the blockchain
     constructor() {
         this.chain = [Block.genesis()];
     }
