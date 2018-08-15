@@ -15,6 +15,7 @@ class Wallet {
         balance: ${this.balance}`
     }
 
+    //Signing transactions with key pair verification
     sign(dataHash) {
         return this.keyPair.sign(dataHash);
     }
@@ -39,6 +40,7 @@ class Wallet {
         return transaction;
     }
 
+    //updates balance for wallet with blockchains updates
     calculateBalance(blockchain) {
         let balance = this.balance;
         let transactions = [];
@@ -71,6 +73,7 @@ class Wallet {
         return balance;
     }
 
+    //Wallet that handles dealing out rewards for mining
     static blockchainWallet() {
         const blockchainWallet = new this();
         blockchainWallet.address = 'blockchain-wallet';
