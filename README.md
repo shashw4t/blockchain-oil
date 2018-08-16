@@ -59,3 +59,4 @@ The proof of work system serves as another line of defense along with chain veri
 ## Wallet 
 The wallet object store's the user's balance and their public-private key pair. The private key generates signatures for the user's transactions and the public key is used to verify the signatures. The public key is also the public address for the wallet. The key pair is generated with secp256k1 elliptical algorithm, the same algorithm used by Bitcoin. 
 
+
