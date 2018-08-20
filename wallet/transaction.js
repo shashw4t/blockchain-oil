@@ -48,7 +48,9 @@ class Transaction {
             amount: MINING_REWARD, address: minerWallet.publicKey
         }]);
     }
-
+    
+    //Used by sender - signs transaction and generates a TransactionInput object.
+     //The signature is based on the hash of the TransactionOutput array.
     static signTransaction(transaction, senderWallet) {
         transaction.input = { 
             timestamp: Date.now(),
@@ -57,7 +59,8 @@ class Transaction {
             signature: senderWallet.sign(ChainUtil.hash(transaction.outputs))
         }
     }
-
+    
+    //This is used by the recipient to verify the transaction
     static verifyTransaction(transaction) {
         return ChainUtil.verifySignature(
             transaction.input.address,
