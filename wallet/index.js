@@ -40,7 +40,11 @@ class Wallet {
         return transaction;
     }
 
-    //updates balance for wallet with blockchains updates
+    //Updates balance for wallet with blockchains updates
+    //only checking new blocks mined (added) since last time balance was calculated
+    //divides up transactions into those that transfered money TO this wallet and FROM this wallet
+    //sets the balance of this wallet after calculating it, so won't have to re-calculate next time
+    //if blockchain hasn't changed - will be super quick
     calculateBalance(blockchain) {
         let balance = this.balance;
         let transactions = [];
