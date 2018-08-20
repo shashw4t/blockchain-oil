@@ -1,6 +1,8 @@
 const ChainUtil = require('../chain-util');
 const { MINING_REWARD} = require('../config');
 
+//This transaction object has an identifier to easily varify it 
+//This has a single input object and an array of output objects
 class Transaction {
     constructor() {
         this.id = ChainUtil.id();
