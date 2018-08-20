@@ -77,6 +77,6 @@ Before transactions are permanently added to the blockchain, they are placed int
 ## Miners
 Mining has been thoroughly explained in other sections at this point, but there are still some features to discuss. As stated previously, miners solve the computationally expensive proof of work to move transactions from the pool to the blockchain. 
 ###### Why mine?
-The incentive for miners is generally a reward provided to them for mining transactions. The reward amount is established in the `config` file.Miners are rewarded with cryptocurrency from the network by a special blockchain wallet. The blockchain wallet has the ability to send reward transactions to miners without reducing its own balance (unlike regular wallets). 
+The incentive for miners is generally a reward provided to them for mining transactions. The reward amount is established in the `config` file. Miners are rewarded with cryptocurrency from the network by a special blockchain wallet. The blockchain wallet has the ability to send reward transactions to miners without reducing its own balance (unlike regular wallets). 
 
 
