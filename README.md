@@ -63,7 +63,8 @@ The wallet object store's the user's balance and their public-private key pair. 
 This blockchain's primary function is to act as a easy trading platform for oil through cryptocurrency and to do that it provides a reliable, permanent, and secure record of every transaction. Each transaction object stored on the blochchain has a unique `ID` to identify the transasction object, a single `Input` object, and an array of `Outputs` objects. 
 
 `Input` 
-This has the sender's address, sender's public key, sender's starting balance, timestamp, and sender's signature of the transaction. 
+This has the sender's address, sender's public key, sender's starting balance, timestamp, and sender's signature of the transaction.
+
 `Output`
 This has the recipient address and the amount to be transferred.
 
