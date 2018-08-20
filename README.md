@@ -57,6 +57,21 @@ This facillitates communication between each user on the network. The communicat
 The proof of work system serves as another line of defense along with chain verification and public/private key signatures. This ensures that only legitimate blocks are added to the chain. Since a blockchain is decentralized any user is capable of adding a block onto the chain, but the proof of work system makes it computationally expensive to do so. This serves as a deterrent to any corrupt blocks. This blockchain uses a similar proof of work system to Bitcoin's Hashcash. The goal of this proof of work system is to produce a hash with a specific amount of leading zeroes, which is the *difficulty* level. The higher the difficulty level, the longer it will take to produce a valid hash. The *nonce* is a value that is iterated for every hash generation attempt for each block. The nonce value is also stored in the block and is used to quickly verify a block's veracity. This blockchain uses a *dynamic* difficulty level to maintain a certain *mine rate*. The mine rate is the expected time in between blocks being mined and is specified with these other values in the `config`. If the time passed between blocks being mined is greater than the mining rate, the difficulty is decreased and vice versa. 
 
 ## Wallet 
-The wallet object store's the user's balance and their public-private key pair. The private key generates signatures for the user's transactions and the public key is used to verify the signatures. The public key is also the public address for the wallet. The key pair is generated with secp256k1 elliptical algorithm, the same algorithm used by Bitcoin. 
+The wallet object store's the user's balance and their public-private key pair. The private key generates signatures for the user's transactions and the public key is used to verify the signatures. The public key is also the public address for the wallet. The key pair is generated with secp256k1 elliptical algorithm, the same algorithm used by Bitcoin. There is a special address for reward transactions that comes from a 'Blockchain Wallet'. The wallet avoids double counting by recalculating the wallet's balance whenever a block is mined.
 
+## Transactions 
+This blockchain's primary function is to act as a easy trading platform for oil through cryptocurrency and to do that it provides a reliable, permanent, and secure record of every transaction. Each transaction object stored on the blochchain has a unique `ID` to identify the transasction object, a single `Input` object, and an array of `Outputs` objects. 
+
+`Input` 
+This has the sender's address, sender's public key, sender's starting balance, timestamp, and sender's signature of the transaction. 
+`Output`
+This has the recipient address and the amount to be transferred.
+
+###### Digital Signatures 
+Every sent transaction are signed with the sender's private key and the recipient verifies the transaction by decrypting the cryptographic hash with the user's public key. 
+
+## Transaction Pool
+Before transactions are permanently added to the blockchain, they are placed into a transaction pool. Miners work to solve the proof of work system and once they have an appropriate hash and nonce, they can add these blocks to the blockchain. Each user has a copy of the pool as well as the blockchain and once the message is sent to update the blockchain another message is sent to clear the transaction pool.
+
+## Miners
 
