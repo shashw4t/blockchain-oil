@@ -1,5 +1,6 @@
 const Transaction = require('../wallet/transaction');
 
+//This is the array of transactions that miners work to clear as they arrive
 class TransactionPool {
     constructor() {
         this.transactions = [];
@@ -39,6 +40,7 @@ class TransactionPool {
         });
     }
 
+    //Resets transaction pool once the transactions have been mined
     clear() {
         this.transactions = [];
     }
