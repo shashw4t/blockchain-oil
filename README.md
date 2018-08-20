@@ -75,4 +75,8 @@ Every sent transaction are signed with the sender's private key and the recipien
 Before transactions are permanently added to the blockchain, they are placed into a transaction pool. Miners work to solve the proof of work system and once they have an appropriate hash and nonce, they can add these blocks to the blockchain. Each user has a copy of the pool as well as the blockchain and once the message is sent to update the blockchain another message is sent to clear the transaction pool.
 
 ## Miners
+Mining has been thoroughly explained in other sections at this point, but there are still some features to discuss. As stated previously, miners solve the computationally expensive proof of work to move transactions from the pool to the blockchain. 
+###### Why mine?
+The incentive for miners is generally a reward provided to them for mining transactions. The reward amount is established in the `config` file.Miners are rewarded with cryptocurrency from the network by a special blockchain wallet. The blockchain wallet has the ability to send reward transactions to miners without reducing its own balance (unlike regular wallets). 
+
 
